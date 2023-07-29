@@ -1,7 +1,7 @@
 pipeline {
 agent any
 environment {
-        PATH="$PATH:/opt/maven/bin"
+        PATH="$PATH:/usr/local/apache-maven/bin"
     }
 stages {
         stage('Deploy to QA') {
