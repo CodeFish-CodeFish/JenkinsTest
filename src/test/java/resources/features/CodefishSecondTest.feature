@@ -1,18 +1,18 @@
 @custom
-Feature: Techtorial  Second test
+Feature: Codefish  Second test
 
-  Scenario: Techtorial First scenario
+  Scenario: Codefish First scenario
     When first test executed
     Then do verification
 
-  Scenario: Techtorial Second scenario
+  Scenario: Codefish Second scenario
     When second test executed
     Then do second verification
 
-  Scenario: Techtorial Third scenario
+  Scenario: Codefish Third scenario
     When third test executed
     Then do third verification
 
-  Scenario: Techtorial Fourth scenario
+  Scenario: Codefish Fourth scenario
     When fourth test executed
     Then do fourth verification

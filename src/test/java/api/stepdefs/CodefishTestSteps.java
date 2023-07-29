@@ -9,13 +9,13 @@ import org.apache.log4j.PropertyConfigurator;
 /**
  * Created by nurkulov 12/30/20
  */
-public class TechtorialTestSteps {
+public class CodefishTestSteps {
     {
         String log4jConfPath = "log4j.properties";
         PropertyConfigurator.configure(log4jConfPath);
     }
 
-    private final Logger LOG = LogManager.getLogger(TechtorialTestSteps.class);
+    private final Logger LOG = LogManager.getLogger(CodefishTestSteps.class);
 
     @When("first test executed")
     public void first_test_executed() {
