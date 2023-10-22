@@ -14,5 +14,4 @@ Update the `credentials.properties` file with valid credentials.
 Run using maven: 
 ```
 mvn test -Dtest=APITestRunner.java
-
 ```
