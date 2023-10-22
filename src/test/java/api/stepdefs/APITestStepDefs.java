@@ -55,7 +55,7 @@ public class APITestStepDefs {
 
 
     @Given("pet is created with following info")
-    public void pet_is_created(DataTable table) {
+    public void petIsCreated(DataTable table) {
         LOG.info("Creating a pet");
         RestAssured.baseURI = "https://petstore.swagger.io";
 
@@ -65,18 +65,18 @@ public class APITestStepDefs {
     }
 
     @When("user executes {string} request")
-    public void user_executes_request(String request) {
+    public void userExecutesRequest(String request) {
         response = given().accept(ContentType.JSON).when().get("v2/pet/8787");
         LOG.info("Get request is executed");
     }
 
     @Then("status code is {int}")
-    public void status_code_is(Integer statusCode) {
+    public void statusCodeIs(Integer statusCode) {
         response.then().statusCode(statusCode);
     }
 
     @Then("pet has following attributes")
-    public void pet_has_following_attributes(io.cucumber.datatable.DataTable dataTable) {
+    public void petHasFollowingAttributes(io.cucumber.datatable.DataTable dataTable) {
         LOG.info("Verifying pet attributes");
         PetPojo parsedPet = response.as(PetPojo.class);
         List<Map<String, String>> maps = dataTable.asMaps();
@@ -131,7 +131,7 @@ public class APITestStepDefs {
     }
 
     @And("pet must have following attributes")
-    public void pet_must_have(DataTable table) throws IOException {
+    public void petMustHave(DataTable table) throws IOException {
 
         Map<String, Object> deserializedResponse = objectMapper.readValue(httpResponse.getEntity().getContent(),
                 new TypeReference<Map<String, Object>>() {
@@ -146,7 +146,7 @@ public class APITestStepDefs {
     }
 
     @Then("status code must be {int}")
-    public void status_code_must_be(int status) {
+    public void statusCodeMustBe(int status) {
         assertEquals(httpResponse.getStatusLine().getStatusCode(), status);
     }
 
