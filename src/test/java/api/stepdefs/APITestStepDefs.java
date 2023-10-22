@@ -178,7 +178,7 @@ public class APITestStepDefs {
 
     @When("user sends get request for GOT")
     public void getCharactersNamesTest() throws URISyntaxException, IOException {
-        uriBuilder.setScheme("https").setHost("api.got.show").setPath("api/show/characters");
+        uriBuilder.setScheme("https").setHost("thronesapi.com").setPath("api/v2/characters");
 
         HttpGet get = new HttpGet(uriBuilder.build());
         get.addHeader("accept", "application/json");
